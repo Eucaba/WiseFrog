@@ -1,0 +1,42 @@
+body {
+    background-color: #E61063;
+}
+
+button {
+    background-color: white;
+    border: solid 0.5px #590758;
+    color: #590758;
+    padding: 15px 32px;
+    text-align: center;
+    font-weight: bold;
+    display: inline-block;
+    font-size: 16px;
+}
+
+#grid {
+    display: grid;
+    grid-template-rows: 10% 10% 60% 10% 10%;
+    grid-template-columns: 10% 40% 40% 10%;
+}
+
+#frog {
+    grid-column: 2 / 3;
+    grid-row: 3 / 5;
+    padding: 2%;
+}
+
+#speech {
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
+    display: flex;
+    align-content: center;
+}
+
+#speech p {
+    border: 1px solid black;
+}
+
+#buttons {
+    grid-column: 3 / 4;
+    grid-row: 4 / 5;
+}
