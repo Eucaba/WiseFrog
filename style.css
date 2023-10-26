@@ -19,10 +19,22 @@ button {
     grid-template-columns: 10% 40% 40% 10%;
 }
 
+header {
+    grid-column: 1 / 5;
+    grid-row: 1 / 2;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
 #frog {
     grid-column: 2 / 3;
     grid-row: 3 / 5;
     padding: 2%;
+}
+
+#frog img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
 }
 
 #speech {
@@ -41,4 +53,47 @@ button {
 #buttons {
     grid-column: 3 / 4;
     grid-row: 4 / 5;
+}
+
+footer {
+    grid-column: 1 / 5;
+    grid-row: 5 / 6;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* media queries para móvil*/
+@media screen and (max-width: 780px) {
+
+    #grid {
+        display: grid;
+        grid-template-rows: 10% 10% 35% 35% 10% 10%;
+        grid-template-columns: 10% 80% 10%;
+    }
+
+    header {
+        grid-column: 1 / 4;
+        grid-row: 1 / 2;
+    }
+    
+    #frog {
+        grid-column: 2 / 3;
+        grid-row: 4 / 5;
+    }
+    
+    #speech {
+        grid-column: 2 / 3;
+        grid-row: 3 / 4;
+        
+    }
+
+    #buttons {
+        grid-column: 2 / 3;
+        grid-row: 5 / 6;
+    }
+
+    footer {
+        grid-column: 1 / 4;
+        grid-row: 6 / 7;
+    }
+
 }
