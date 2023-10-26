@@ -1,3 +1,6 @@
+var API_Key = config.API_Key;
+var API_Host = config.API_Host;
+
 window.addEventListener("load", function () {
 
     document.getElementById("getquote").addEventListener("click", getquote)
@@ -20,8 +23,8 @@ window.addEventListener("load", function () {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
-                "X-RapidAPI-Key": "cbd6d1b3c8msh615555f69155e1bp1b5c07jsn0990004d8cb8",
-                "X-RapidAPI-Host": "quotes15.p.rapidapi.com",
+                "X-RapidAPI-Key": API_Key,
+                "X-RapidAPI-Host": API_Host,
             }
         })
             .then(res => res.json())
