@@ -32,7 +32,7 @@ window.addEventListener("load", function () {
                 console.log(objJson)
                 const quote = objJson.data; //accedeo al obj y su contenido
 
-                let quoteContentHTML = `<p> ${objJson.content} </p>`;
+                let quoteContentHTML = `<p>"${objJson.content}"</p>`;
                 let textbubble = document.getElementById("speech")
                 textbubble.innerHTML= quoteContentHTML;
             })

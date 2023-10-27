@@ -1,11 +1,18 @@
+:root {
+    /*variables de color*/
+    --pink: #E61063;
+    --lilac: #590758;
+    --palePink: rgba(255, 255, 255, 0.3);
+}
+  
 body {
-    background-color: #E61063;
+    background-color: var(--pink);
 }
 
 button {
     background-color: white;
-    border: solid 0.5px #590758;
-    color: #590758;
+    border: solid 0.5px var(--lilac);
+    color: var(--lilac);
     padding: 15px 32px;
     text-align: center;
     font-weight: bold;
@@ -15,14 +22,14 @@ button {
 
 #grid {
     display: grid;
-    grid-template-rows: 1fr 1fr 6fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 3fr 1fr 1fr;
     grid-template-columns: 1fr 4fr 4fr 1fr;
 }
 
 header {
     grid-column: 1 / 5;
     grid-row: 1 / 2;
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: var(--palePink);
 }
 
 #frog {
@@ -41,24 +48,31 @@ header {
     grid-column: 3 / 4;
     grid-row: 3 / 4;
     display: flex;
-    align-content: center;
-    background-color: rgba(255, 255, 255, 0.3);
-    
+    align-items: center;
+    padding: 1%;
 }
 
 #speech p {
-    border: 1px solid black;
+    background-color: var(--palePink);
+    font-family: Merienda;
+    font-weight: bold;
+    text-align: justify;
+    justify-self: center;
+    padding: 2%;
 }
 
 #buttons {
     grid-column: 3 / 4;
     grid-row: 4 / 5;
+    display: flex;
+    justify-content: center;
+    padding: 3%;
 }
 
 footer {
     grid-column: 1 / 5;
     grid-row: 5 / 6;
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: var(--palePink);
 }
 
 /* media queries para móvil*/
@@ -69,28 +83,23 @@ footer {
         grid-template-rows: 1fr 1fr 3fr 3fr 1fr 1fr;
         grid-template-columns: 1fr 8fr 1fr;
     }
-
     header {
         grid-column: 1 / 4;
         grid-row: 1 / 2;
     }
-    
     #frog {
         grid-column: 2 / 3;
         grid-row: 4 / 5;
     }
-    
     #speech {
         grid-column: 2 / 3;
         grid-row: 3 / 4;
         
     }
-
     #buttons {
         grid-column: 2 / 3;
         grid-row: 5 / 6;
     }
-
     footer {
         grid-column: 1 / 4;
         grid-row: 6 / 7;
