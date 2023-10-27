@@ -39,5 +39,9 @@ window.addEventListener("load", function () {
         
         let button = document.getElementById("getquote")
         button.innerText = "Por favor, transmíteme otra enseñanza"
+
+        let frog = document.getElementById("frog")
+        frog.innerHTML = `<img src="/images/wisefrogglow.png"
+        alt="un personaje de fantasía, una rana con capa y una bola de cristal resplandecientes" />`
     }
 })
