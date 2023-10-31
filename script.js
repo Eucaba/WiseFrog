@@ -31,16 +31,17 @@ window.addEventListener("load", function () {
             .then(objJson => {
                 console.log(objJson)
 
-                let quoteContentHTML = `<p>"${objJson.content}" - ${objJson.originator.name}</p>`;
+                let quoteContentHTML = `<p>"${objJson.content}"</p>
+                <p style="text-align: center;">${objJson.originator.name}</p>`;
                 let textbubble = document.getElementById("speech")
                 textbubble.innerHTML= quoteContentHTML;
             })
         
         let button = document.getElementById("getquote")
-        button.innerText = "Obtener otra cita"
+        button.innerText = "Obtener otra cita";
 
         let frog = document.getElementById("frog")
-        frog.innerHTML = `<img src="/images/wisefrogglow.png"
-        alt="un personaje de fantasía, una rana con capa y una bola de cristal resplandecientes" />`
+        frog.src = "/images/wisefrogglow.png";
+        frog.alt= "un dibujo de rana con capa y una bola de cristal resplandeciente";
     }
 })
