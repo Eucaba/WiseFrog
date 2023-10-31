@@ -30,15 +30,14 @@ window.addEventListener("load", function () {
             .then(res => res.json())
             .then(objJson => {
                 console.log(objJson)
-                const quote = objJson.data; //accedeo al obj y su contenido
 
-                let quoteContentHTML = `<p>"${objJson.content}"</p>`;
+                let quoteContentHTML = `<p>"${objJson.content}" - ${objJson.originator.name}</p>`;
                 let textbubble = document.getElementById("speech")
                 textbubble.innerHTML= quoteContentHTML;
             })
         
         let button = document.getElementById("getquote")
-        button.innerText = "Por favor, transmíteme otra enseñanza"
+        button.innerText = "Obtener otra cita"
 
         let frog = document.getElementById("frog")
         frog.innerHTML = `<img src="/images/wisefrogglow.png"
