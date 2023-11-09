@@ -21,6 +21,10 @@ h1 {
     padding: 2%;
 }
 
+i {
+    color: black;
+}
+
 #grid {
     display: grid;
     grid-template-rows: 3fr 1fr;
@@ -56,7 +60,7 @@ h1 {
 }
 
 #getquote {
-    gird-area: 2 / 2 / 3 / 3;
+    grid-area: 2 / 2 / 3 / 3;
     align-self: flex-start;
     justify-self: center;
     background-color: white;
@@ -71,4 +75,7 @@ h1 {
 
 footer {
     background-color: var(--palePink);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
